@@ -1,4 +1,4 @@
-# 🚀 AWS EC2 Website Deployment with Nginx
+# 🚀 Production-Ready Website Deployment on AWS EC2 with Nginx, Domain & HTTPS
 
 ## 📌 Project Overview
 This project demonstrates how to deploy a static website on a cloud server using AWS EC2 and configure it with a custom domain and HTTPS.
