@@ -1,7 +1,7 @@
 # 🚀 Production-Ready Website Deployment on AWS EC2 with Nginx, Domain & HTTPS
 
 ## 📌 Project Overview
-This project demonstrates how to deploy a static website on a cloud server using AWS EC2 and configure it with a custom domain and HTTPS.
+This project demonstrates an end-to-end deployment of a static website on a cloud server using AWS EC2, configured with a custom domain and secured with HTTPS.
 
 ---
 
@@ -12,6 +12,16 @@ This project demonstrates how to deploy a static website on a cloud server using
 - SSH
 - DuckDNS (Free Domain)
 - Let's Encrypt (SSL)
+
+---
+
+## 🏗️ Architecture
+
+User → Domain (DuckDNS) → AWS EC2 → Nginx → Static Website
+
+- Domain mapped to EC2 public IP
+- Nginx serves website on port 80
+- HTTPS enabled on port 443 using SSL
 
 ---
 
@@ -29,12 +39,13 @@ This project demonstrates how to deploy a static website on a cloud server using
 
 ## 🌐 Live Demo
 
-⚠️ Instance was stopped to avoid AWS charges.
+⚠️ The EC2 instance was stopped to avoid AWS charges.
 
-Screenshots below demonstrate successful deployment.
+The project was successfully deployed and tested using:
 
-Domain used:
-http://alfred-devops.duckdns.org
+🔗 http://alfred-devops.duckdns.org
+
+Refer to screenshots below for proof of successful deployment.
 
 ---
 
@@ -63,11 +74,25 @@ http://alfred-devops.duckdns.org
 
 ---
 
+## 🔐 Security Configuration
+
+- Opened ports:
+  - 22 (SSH)
+  - 80 (HTTP)
+  - 443 (HTTPS)
+- Configured firewall rules using EC2 Security Groups
+- Enabled SSL encryption using Let's Encrypt
+- Automatic SSL renewal configured via Certbot
+
+---
+
 ## 🔒 HTTPS Configuration
+
 SSL certificate configured using Let's Encrypt.
 
 - Secure HTTPS enabled
-- Auto-renewal configured using Certbot
+- Auto-renewal enabled
+- Certificate validity verified
 
 ---
 
@@ -90,6 +115,15 @@ SSL certificate configured using Let's Encrypt.
 
 ---
 
+## 🚀 Future Improvements
+
+- Use Elastic IP for permanent hosting
+- Configure Load Balancer for scalability
+- Automate deployment using CI/CD pipelines
+- Deploy dynamic applications (Node.js, React)
+
+---
+
 ## 📌 Conclusion
 
-This project demonstrates a complete end-to-end deployment of a website on the cloud with domain and security, forming a strong foundation in DevOps.
+This project demonstrates a complete end-to-end deployment of a secure website on the cloud using industry-standard tools and practices, forming a strong foundation in DevOps and cloud engineering.
